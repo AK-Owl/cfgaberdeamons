@@ -15,4 +15,4 @@ def index(request):
     response = requests.request("GET", url, headers=headers, params=querystring)
     print(response.text)
 
-    return render(request, 'chooseamovie/chooseamovie.html')
+    return render(request, 'chooseamovie/home.html')

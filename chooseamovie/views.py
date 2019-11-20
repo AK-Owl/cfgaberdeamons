@@ -5,14 +5,18 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    url = 'https://movie-database-imdb-alternative.p.rapidapi.com/'
-    querystring = {"page":"1","r":"json","s":"Avengers Endgame"}
+    url = "https://moviesearch.p.rapidapi.com/movie/tt0116483"
 
     headers = {
-    'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com",
-    'x-rapidapi-key': "9cb9082d80msh1114acf15ea6021p1b870bjsn9ceb55c5624e"
-    }
-    response = requests.request("GET", url, headers=headers, params=querystring)
+        'x-rapidapi-host': "moviesearch.p.rapidapi.com",
+        'x-rapidapi-key': "40fe49604bmsh4109773f44bc704p1c7601jsn15aeb5ed70af"
+        }
+
+    response = requests.request("GET", url, headers=headers)
+
     print(response.text)
 
     return render(request, 'chooseamovie/home.html')
+
+def home(request):
+    return HttpResponse("Hello, world. You're at the polls index.")

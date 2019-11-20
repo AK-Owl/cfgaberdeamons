@@ -1,22 +1,23 @@
 # -*- coding: utf-8 -*-
 #from __future__ import unicode_literals
 import requests
+import json
 from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    url = "https://moviesearch.p.rapidapi.com/movie/tt0116483"
 
-    headers = {
-        'x-rapidapi-host': "moviesearch.p.rapidapi.com",
-        'x-rapidapi-key': "40fe49604bmsh4109773f44bc704p1c7601jsn15aeb5ed70af"
-        }
+    r = requests.get('http://api.open-notify.org/astros.json')
+    global data
+    data = r.json()
+    print(data)
+    print ("****************************************************")
+    print(data['people'])
+    print ("***********************$$$$$$$$$$$$$$*****************************")
+    #global data1 = data['people'][1]
+    #datax = data[u'people'[u'name']]
+    return render(request, 'chooseamovie/home.html',{
+    'people': data['people']
+    })
 
-    response = requests.request("GET", url, headers=headers)
-
-    print(response.text)
-
-    return render(request, 'chooseamovie/home.html')
-
-def home(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    

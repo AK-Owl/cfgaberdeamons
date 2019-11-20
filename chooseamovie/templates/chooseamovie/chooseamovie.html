@@ -71,4 +71,12 @@
     </footer>
 </body>
 
+  <ul>
+{% for value in people %}
+  <li>Name of the austronaut: <b>{{value.name}}</b></li>
+  <li>Craft: {{value.craft}}</li>
+{% endfor %}
+</ul>
+
+</body>
 </html>

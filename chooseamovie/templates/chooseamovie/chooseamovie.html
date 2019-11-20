@@ -3,10 +3,11 @@
 <!doctype html>
 <html>
 <body>
-  {{data}}
+
   <ul>
 {% for value in people %}
-  <li>{{value}}</li>
+  <li>Name of the austronaut: <b>{{value.name}}</b></li>
+  <li>Craft: {{value.craft}}</li>
 {% endfor %}
 </ul>
 

@@ -5,6 +5,7 @@ import json
 from django.shortcuts import render
 
 # Create your views here.
+# API from http://api.open-notify.org/astros.json
 def index(request):
 
     r = requests.get('http://api.open-notify.org/astros.json')
@@ -19,6 +20,8 @@ def index(request):
     return render(request, 'chooseamovie/home.html',{
     'people': data['people']
     })
+
+#API attempted from https://data-flair.training/blogs/django-send-email/
 
 #def subscribe(request):
 #    sub = forms.Subscribe()

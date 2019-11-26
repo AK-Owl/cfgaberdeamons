@@ -1,1 +1,1 @@
-web: gunicorn cfgaberdeamons.wsgi
+web: python runserver.py $PORT

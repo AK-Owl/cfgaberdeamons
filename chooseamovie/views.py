@@ -4,7 +4,7 @@ import requests
 import json
 from django.shortcuts import render
 
-# Create your views here.
+# Create your views here.gi
 # API from http://api.open-notify.org/astros.json
 def index(request):
 

@@ -9,6 +9,7 @@ Click==7.0
 cryptography==2.6.1
 Django==1.11.26
 enum34==1.1.6
+ez-setup==0.9
 Flask==1.1.1
 funcsigs==1.0.2
 future==0.17.1

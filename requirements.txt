@@ -8,6 +8,7 @@ chardet==3.0.4
 Click==7.0
 cryptography==2.6.1
 Django==1.11.26
+django-mail-templated==2.6.5
 enum34==1.1.6
 Flask==1.1.1
 future==0.17.1
@@ -73,17 +74,3 @@ virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 Werkzeug==0.16.0
 xattr==0.6.4
-certifi==2019.9.11
-chardet==3.0.4
-Click==7.0
-Django==1.11.26
-django-mail-templated==2.6.5
-Flask==1.1.1
-idna==2.8
-itsdangerous==1.1.0
-Jinja2==2.10.1
-MarkupSafe==1.1.1
-pytz==2019.3
-requests==2.22.0
-urllib3==1.25.6
-Werkzeug==0.16.0
